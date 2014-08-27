@@ -1,0 +1,35 @@
+body {
+	background-color: #fff;
+	background: url(../img/home-bg.jpg) repeat-x;
+}
+/* logo */
+#logo {
+	margin: 0;
+	height: 85px;
+	display: block;
+	background: url("../img/logo.png") no-repeat;
+	margin-left: 40px;
+}
+
+#lefttitlebar h3 {
+	color: #2989F8;
+	display: block;
+	font-family: "华文细黑", "微软雅黑", "黑体", "宋体", "宋体-方正超大字符集";
+	font-size: 16px;
+	height: 29px;
+	line-height: 29px;
+	margin-bottom: 4px;
+	margin-left: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 140px;
+}
+
+#recordPage {
+	margin-bottom: 0px
+}
+
+#gotopage {
+	margin-bottom: 0px
+}

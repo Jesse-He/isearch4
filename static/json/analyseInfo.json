@@ -1,0 +1,20 @@
+{
+	"ret":true,
+	"errcode":0,
+	"errmsg":"",
+	"ver":1,
+	"data":{
+		"date": "2012/05/16/12:00",
+    	"days": 2,
+    	"siteNum": 1222,
+    	"changeSite": 1222,
+    	"topNum": 1543,
+    	"crawlTimes":12453652121,
+    	"warnInfo":1235435431,
+    	"negativeInfo":1242742331,
+    	"focuseInfo":1231,
+    	"relativeInfo":1200031,
+    	"commonInfo":1200031,
+    	"infoNum":120131
+	}
+}

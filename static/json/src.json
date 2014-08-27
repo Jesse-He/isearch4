@@ -1,0 +1,22 @@
+{
+    "ret": true,
+    "errcode": 0,
+    "errmsg": "",
+    "ver": 1,
+    "data": {
+        "srctypes": [
+            {
+                "name": "智联招聘",
+                "key": 0
+            },
+            {
+                "name": "51job",
+                "key": 1
+            },
+            {
+                "name": "中华英才网",
+                "key": 2
+            }
+        ]
+    }
+}

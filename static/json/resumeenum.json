@@ -1,0 +1,62 @@
+{
+    "ret": true,
+    "errcode": 0,
+    "errmsg": "",
+    "ver": 1,
+    "data": {
+        "gender": [
+            {
+                "key": 0,
+                "value": "男"
+            },
+            {
+                "key": 1,
+                "value": "女"
+            }
+        ],
+        "highestEdu": [
+            {
+                "key": 0,
+                "value": "大专"
+            },
+            {
+                "key": 1,
+                "value": "本科"
+            },
+            {
+                "key": 2,
+                "value": "博士"
+            },
+            {
+                "key": 3,
+                "value": "其他"
+            }
+        ],
+        "marriage": [
+            {
+                "key": 0,
+                "value": "未婚"
+            },
+            {
+                "key": 1,
+                "value": "已婚"
+            },
+            {
+                "key": 2,
+                "value": "离异"
+            }
+        ],
+        "webOrigin": [
+            {
+                "web": "51job",
+                "parseurl": "../json/resumeinfo.json",
+                "prefix": "51"
+            },
+            {
+                "web": "智联招聘",
+                "parseurl": "/resume-sys-team1/api/resume/parse/51",
+                "prefix": "zl"
+            }
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+.pagin {
+            font-size: 13px;
+        }
+        
+.pagin a {
+    text-decoration: none;
+	border: solid 1px #AAE;
+	color: #15B;
+}
+
+.pagin a, .pagin span {
+    display: block;
+    float: left;
+    padding: 0.3em 0.5em;
+    margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.pagin .current {
+    background: #26B;
+    color: #fff;
+	border: solid 1px #AAE;
+}
+
+.pagin .current.prev, .pagin .current.next{
+	color:#999;
+	border-color:#999;
+	background:#fff;
+}
+
+/*#Searchresult {
+			font-size: 13px;
+			margin-top:15px;
+			margin-bottom:15px;
+			border:solid 1px #eef;
+			padding:5px;
+			background:#eef;
+}	
+*/
+a em {
+text-decoration:underline;
+}
+em {
+color:#CC0000;
+font-style:normal;
+}

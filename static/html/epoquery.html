@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>iSearch-4</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/jqcloud.css" />
+<link rel="stylesheet" type="text/css" href="../css/isearch4-resp.css">
+<!-- 时间控件格式 -->
+<link rel="stylesheet" type="text/css"
+	href="../css/jqueryui/jquery-ui-1.8.21.custom.css">
+<link rel="stylesheet" type="text/css"
+	href="../css/jqueryui/datetimepicker.css">
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button class="btn btn-navbar" data-target=".nav-collapse"
+					data-toggle="collapse" type="button">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<div class="nav-collapse collapse" id="navbar"></div>
+			</div>
+		</div>
+	</div>
+	<header id="overview" class="jumbotron subhead">
+		<div id="logo" class="container"></div>
+	</header>
+	<!-- begin container -->
+	<div class="container">
+		<div id="mainBody" class="row">
+			<div id="manage" class="span2">
+				<h5 class="page-header">
+					<i class="icon-th-list"></i>舆情主题分布
+				</h5>
+				<!-- <a class="topicclass">舆情主题分布</a> -->
+				<div id="topicDis" class=" well"></div>
+				<div class=" well">
+					<h5 class="page-header">
+						<i class="icon-th-list"></i>热点词云
+					</h5>
+					<div id="topicCloud" style="height: 350px;"></div>
+				</div>
+				<!-- xinjia -->
+			</div>
+			<div class="span10">
+				<div class="row-fluid">
+					<div id="levelone"></div>
+				</div>
+				<!--<div class="row-fluid"> 
+			<div id="tableArea" class="well"> -->
+				<!-- 数据区域 -->
+				<div class="row-fluid">
+					<div class="page-header">
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>舆
+							情 摘 要</strong><span class="pull-right">排序:<select id="listsort"
+							class="selcombobox" style="height: 25px; width: 100px;"
+							name="listsort" onchange='javascript:SearchByOrder(this);'>
+								<option value="1" selected="selected">按情感值</option>
+								<option value="2">按发表时间</option>
+								<option value="3">按采集时间</option>
+								<option value="4">按热度</option>
+								<option value="5">按相关度</option>
+						</select></span>
+					</div>
+					<div class="well" id="dataArea"></div>
+				</div>
+				<!-- 分页区域 -->
+				<div id="pagination" class="btn-toolbar"></div>
+				<!-- /分页区域 -->
+				<!-- 		</div> -->
+				<!-- 			</div> -->
+			</div>
+		</div>
+		<!-- end of mainBody -->
+		<div class="row well">
+			<div id="footer"></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/ext/jquery-1.8.3.js"></script>
+	<script type="text/javascript" src="../js/ext/bootstrap.js"></script>
+	<script type="text/javascript" src="../js/jquery.scrollUp.min.js"></script>
+	<!-- top1 -->
+	<script type="text/javascript" src="../js/jquery.unveil.min.js"></script>
+	<!-- top2 -->
+	<script type="text/javascript"
+		src="../js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script type="text/javascript"
+		src="../js/jquery-ui-timepicker-addon.js"></script>
+	<script src="../js/highcharts/highcharts4.js"></script>
+	<script type="text/javascript" src="../js/highcharts/highcharts-3d.js"></script>
+	<script type="text/javascript" src="../js/ext/jqcloud-1.0.4.js"></script>
+	<script type="text/javascript" src="../js/md5.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/cachepage.js"></script>
+	<script type="text/javascript" src="../js/utils.js"></script>
+	<script type="text/javascript" src="../js/epoquery.js"></script>
+</body>

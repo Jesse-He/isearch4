@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>iSearch4-互联网舆情监测与预警系统</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/isearch4-resp.css">
+</head>
+<body>
+	<div class="container">
+		<div id="login-header" class="row">
+			<div id="login-logo" class="span8">
+				<h3 id="login-title">互联网舆情监测系统</h3>
+			</div>
+			<div id="login-content" class="span4">
+				<a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>
+					<a href="mailto:yangcm@swust.edu.cn">反馈</a> |
+					<a href="../doc/dwz-user-guide.pdf" target="_blank">帮助</a>
+			</div>
+		</div>
+		<div id="login-body" class="row">
+
+			<form name="form1" id="login-form" class="form-horizontal">
+				<div class="control-group">
+					<div class="controls">
+						<img src="../img/login_title.png" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="user_name">用 户:</label>
+					<div class="controls">
+						<input name="user_name" id="user_name" type="text"
+							placeholder="用户名" class="input-medium">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="user_password">密 码:</label>
+					<div class="controls">
+						<input name="user_password" id="user_password" type="password"
+							placeholder="密码" class="input-medium">
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="user_password"><span
+						class="add-on">验证码：</span></label>
+					<div class="controls">
+						<input type="text" class="span1" placeholder="验证码" id="authcode">
+						<span class="help-inline label label-info "><img
+							id="imgcode" src="checkcode.jsp" onclick="reloadcode()" alt="验证码">
+						</span>
+					</div>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<button id="loginbut" class="btn">
+							<i class="icon-lock"></i> 登录
+						</button>
+						<button id="loginrest" type="reset" class="btn">
+							<i class=" icon-remove-circle"></i> 重置
+						</button>
+					</div>
+				</div>
+				<div id="alertmsg"></div>
+			</form>
+		</div>
+		<div class="row">
+			<div id="footer"></div>
+		</div>
+	</div>
+	<script src="../js/ext/jquery-1.8.3.js"></script>
+	<script src="../js/ext/bootstrap.js"></script>
+	<script type="text/javascript" src="../js/md5.js"></script>
+	<script type="text/javascript" src="../js/login.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+</body>

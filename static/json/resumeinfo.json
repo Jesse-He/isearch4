@@ -1,0 +1,27 @@
+{
+    "ret": true,
+    "errcode": 0,
+    "errmsg": "",
+    "ver": 1,
+    "data": {
+        "name": "常晓龙1",
+        "gender": "1",
+        "birthday": "1989-05-22",
+        "highestEdu": "1",
+        "mobilePhone": "18611594766",
+        "qq": "854012609",
+        "marriage": "1",
+        "IDCard": "341221198905220437",
+        "residence": "北京市海淀区",
+        "annualSalary": "5000元/月",
+        "email": "changxiaolong522@126.com",
+        "expectedSalary": "10000元/月",
+        "workExp": "没工作",
+        "eduExp": "为教育",
+        "projectExp": "无项目",
+        "training": "无培训",
+        "skills": "低能儿",
+        "awards": "差等生",
+        "certificates": "光秃秃"
+    }
+}

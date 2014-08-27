@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>iSearch-4--主题管理</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/isearch4-resp.css">
+<!-- 时间控件格式 -->
+<link rel="stylesheet" type="text/css"
+	href="../css/jqueryui/jquery-ui-1.8.21.custom.css">
+<link rel="stylesheet" type="text/css"
+	href="../css/jqueryui/datetimepicker.css">
+</head>
+<body class="layout-wrap">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button class="btn btn-navbar" data-target=".nav-collapse"
+					data-toggle="collapse" type="button">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<div class="nav-collapse collapse" id="navbar"></div>
+			</div>
+		</div>
+	</div>
+	<header id="overview" class="jumbotron subhead">
+		<div id="logo" class="container"></div>
+	</header>
+	<div class="container">
+		<div class="row-fluid well">
+			<div class="column text-center span2 well">
+				<h5 class="page-header">
+					<i class="icon-eye-open"></i>监测主题管理
+				</h5>
+				<div class="" id="topMenu"></div>
+			</div>
+			<div class="span10">
+				<h3 id="title" class="page-header">主题管理</h3>
+				<div id="delInfo"></div>
+				<div id="tInfo1"></div>
+				<div class="buttonGroup">
+					<a id="addTopicButton" class="btn btn-primary" type="button"
+						href="#addTopic" data-toggle="modal" role="button"
+						onclick='setTitle()'> <i class="icon-plus-sign icon-white"></i>
+						增加
+					</a>
+					<!-- <a id="delTopicButton" class="btn btn-danger" type="button"
+						onclick='delTitles();'> <i class=" icon-remove icon-white"></i>
+						删除
+					</a> -->
+				</div>
+				<div id="addArea"></div>
+				<div id="data" class="well">
+					<div id="dataArea"></div>
+					<!-- 分页区域 -->
+					<div id="pagination" class="btn-toolbar"></div>
+					<!-- /分页区域 -->
+				</div>
+			</div>
+		</div>
+		<!-- end of mainBody -->
+		<div class="row-fluid well">
+			<div id="footer"></div>
+		</div>
+		<div>
+			<div id="addTopic" class="modal hide fade" role="dialog"
+				aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<h3 id="tModalLabel">添加主题</h3>
+				</div>
+				<div id="tInfo"></div>
+				<div class="modal-body">
+					<form class="form-horizontal">
+						<div class="control-group">
+							<label class="control-label" for="topicname">主题名称</label>
+							<div class="controls">
+								<input id=topicname type="text" placeholder="主题名称"> <span
+									class="help-inline">*必填，可以识别该主题的名称</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="topicCate">主题分类</label>
+							<div class="controls">
+								<select id="topicCate">
+								</select>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="topicinkw">包含的关键字</label>
+							<div class="controls">
+								<input id="topicinkw" type="text" placeholder="包含关键字"> <span
+									class="help-inline">*必填，监测主题中包含的关键词语，多个用空格分开</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="topicexkw">不包含关键字</label>
+							<div class="controls">
+								<input id="topicexkw" type="text" placeholder="不包含关键字">
+								<span class="help-inline">监测主题中不包含的关键词语，多个用空格分开</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="topicatten">关注度</label>
+							<div class="controls">
+								<select id="topiclevel" class="span2">
+									<option value='1'>一般关注</option>
+									<option value='2'>比较关注</option>
+									<option value='3'>特别关注</option>
+								</select> <span class="help-inline">监测主题的关注级别</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="topicTime">监测时间</label>
+							<div id="searchByTime">
+								<div class="controls">
+									<input id=topicStartTime class="form_datetime span2"
+										type="text" placeholder="请选择开始时间"> 至 <input
+										id="topicEndTime" class="form_datetime span2" type="text"
+										placeholder="请选择结束时间">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+					<button id="saveTopic" class="btn btn-primary">保存</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../js/ext/jquery-1.8.3.js"></script>
+	<script src="../js/ext/bootstrap.js"></script>
+	<script src="../js/ext/bootstrap-tab.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript"
+		src="../js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script type="text/javascript"
+		src="../js/jquery-ui-timepicker-addon.js"></script>
+	<script type="text/javascript" src="../js/utils.js"></script>
+	<script type="text/javascript" src="../js/md5.js"></script>
+	<script type="text/javascript" src="../js/jquery.scrollUp.min.js"></script>
+	<!-- top1 -->
+	<script type="text/javascript" src="../js/jquery.unveil.min.js"></script>
+	<!-- top2 -->
+	<script type="text/javascript" src="../js/cachepage.js"></script>
+	<script type="text/javascript" src="../js/topic.js"></script>
+</body>

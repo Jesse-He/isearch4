@@ -1,0 +1,7 @@
+{
+"ret":true,
+"errcode":0,
+"errmsg":"",
+"ver":1,
+"data":[{"name":"姓名","key":"name"},{"name":"性别","key":"gender"}]
+}

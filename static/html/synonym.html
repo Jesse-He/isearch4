@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>iSearch-4--topic</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/isearch4-resp.css">
+</head>
+<body class="layout-wrap">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button class="btn btn-navbar" data-target=".nav-collapse"
+					data-toggle="collapse" type="button">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<div class="nav-collapse collapse" id="navbar"></div>
+			</div>
+		</div>
+	</div>
+	<header id="overview" class="jumbotron subhead">
+		<div id="logo" class="container"></div>
+	</header>
+	<div class="container">
+		<div class="row-fluid well">
+			<div class="column text-center span2 well">
+				<h5 class="page-header">
+					<i class="icon-eye-open"></i>监测主题管理
+				</h5>
+				<div class="" id="topMenu"></div>
+			</div>
+			<div class="span10">
+				<h3 id="title" class="page-header">监测同义词管理</h3>
+				<div id="delInfo"></div>
+				<div class="buttonGroup">
+					<a id="addButton" class="btn btn-primary" type="button"
+						href="#addSynonym" data-toggle="modal" role="button"
+						onclick="addSynonymButton();"> <i
+						class="icon-plus-sign icon-white"></i> 增加
+					</a>
+				</div>
+				<div id="data" class="well">
+					<div id="delInfo"></div>
+					<div id="dataArea"></div>
+					<!-- 分页区域 -->
+					<div id="pagination" class="btn-toolbar">
+					</div>
+					<!-- /分页区域 -->
+				</div>
+			</div>
+		</div>
+		<!-- end of mainBody -->
+		<div class="row-fluid well">
+			<div id="footer"></div>
+		</div>
+		<div>
+			<div id="addSynonym" class="modal hide fade" role="dialog"
+				aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<h3 id="myModalLabel">添加监测同义词</h3>
+				</div>
+				<div class="modal-body">
+					<div id="information"></div>
+					<form class="form-horizontal">
+						<div class="control-group">
+							<lable class="control-label" for="synonym">主关键词</lable>
+							<div class="controls">
+								<input id="synonym" class="input-big valid" type="text"
+									name="synonym"> <span class="help-inline">请输入一个用于索引监测同义词词典的主关键词名称</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="synonymWords">同义词典</label>
+							<div class="controls">
+								<textarea id="synonymWords" class="input-xlarge" row="10"></textarea>
+								<span class="help-inline">请输入与主关键词先关的其他词语，多个词语见用空格分开</span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+					<button id="saveSynonym" class="btn btn-primary">保存</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../js/ext/jquery-1.8.3.js"></script>
+	<script src="../js/ext/bootstrap.js"></script>
+	<script src="../js/ext/bootstrap-tab.js"></script>
+	<script type="text/javascript" src="../js/md5.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/cachepage.js"></script>
+	<script type="text/javascript" src="../js/synonym.js"></script>
+</body>

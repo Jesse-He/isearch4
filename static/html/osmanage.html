@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>iSearch-4--用户管理</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/isearch4-resp.css">
+</head>
+<body class="layout-wrap">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button class="btn btn-navbar" data-target=".nav-collapse"
+					data-toggle="collapse" type="button">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<div class="nav-collapse collapse" id="navbar"></div>
+			</div>
+		</div>
+	</div>
+	<header id="overview" class="jumbotron subhead">
+		<div id="logo" class="container"></div>
+	</header>
+	<div class="container">
+		<div class="row-fluid well">
+			<div class="span2 well">
+				<h5 class="page-header">
+					<i class="icon-cog"></i>系统管理
+				</h5>
+				<div class="" id="topMenu"></div>
+			</div>
+			<div class="span10">
+				<h3 id="title" class="page-header">用户管理</h3>
+				<div id="delInfo"></div>
+				<div class="buttonGroup">
+					<a id="addButton" class="btn btn-primary" type="button"
+						href="#modUser" data-toggle="modal" role="button"
+						onclick="javascript:addButtonDown();"> <i
+						class="icon-plus-sign icon-white"></i> 增加
+					</a>
+				</div>
+				<div id="addArea"></div>
+				<div id="data">
+					<div id="dataArea"></div>
+					<!-- 分页区域 -->
+					<div id="pagination" class="btn-toolbar"></div>
+					<!-- /分页区域 -->
+				</div>
+			</div>
+		</div>
+		<div class="row-fluid well">
+			<div id="footer"></div>
+		</div>
+		<div>
+			<!-- <div id="modUser" class="modal hide fade" role="dialog"
+				aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<h3 id="myModalLabel">添加用户</h3>
+				</div>
+				<div class="modal-body">
+					<div id="information"></div>
+					<form class="form-horizontal">
+						<div class="control-group">
+							<label class="control-label" for="userName">用户 名</label>
+							<div class="controls">
+								<input id="userName" class="input-big valid" type="text"
+									data-provide="typeahead" name="userName"> <span
+									class="help-inline">请输入用户的登录名称</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="userTrueName">用户姓名</label>
+							<div class="controls">
+								<input id="userTrueName" class="input-big valid" type="text"
+									data-provide="typeahead" name="userTrueName"> <span
+									class="help-inline">请输入用户的真实名称</span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="password">用户密码</label>
+							<div class="controls">
+								<input id="password" class="input-big valid" type="password"
+									name="password"> <span class="help-inline"></span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="password2">确认密码</label>
+							<div class="controls">
+								<input id="password2" class="input-big valid" type="password"
+									name="password2"> <span class="help-inline"></span>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="role">用户角色</label>
+							<div class="controls">
+								<input id="role" class="input-big valid span2" type="text"
+									name="role"> <span class="help-inline">请输入0或者1,0为一般用户，1为管理员</span>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div id="operateButton" class="modal-footer">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+					<button id="saveButton" class="btn btn-primary">保存</button>
+				</div>
+			</div> -->
+		</div>
+	</div>
+		<!-- 删除弹出层 start -->
+	<div id="delModal" class="modal hide fade">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"
+				aria-hidden="true">&times;</button>
+			<h3>删除用户</h3>
+		</div>
+		<div class="modal-body">
+			<table border="0">
+				<tr>
+					<td id='delLabel'>确认删除？</td>
+				</tr>
+			</table>
+		</div>
+		<div class="modal-footer">
+			<a class="btn" data-dismiss="modal" aria-hidden="true">关闭</a> 
+			<button id="delOamanage" class="btn btn-primary">确认</button>
+		</div>
+	</div>
+	<!-- 删除弹出层 end -->
+	<script src="../js/ext/jquery-1.8.3.js"></script>
+	<script src="../js/ext/bootstrap.js"></script>
+	<script src="../js/ext/bootstrap-tab.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/md5.js"></script>
+	<script type="text/javascript" src="../js/cachepage.js"></script>
+	<script type="text/javascript" src="../js/osmanage.js"></script>
+</body>

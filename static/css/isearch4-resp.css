@@ -1,0 +1,264 @@
+/* Body and structure
+-------------------------------------------------- */
+body {
+	background: #eff2f5 url('../img/main-bg-top.jpg') top left repeat-x;
+}
+
+#login-header {
+	height: 76px;
+	margin-top: 80px;
+}
+
+#login-logo {
+	height: 76px;
+	background: url('../img/isearch4-logo-login.png') top left no-repeat;
+}
+
+#login-title {
+	padding: 20px 0 0 205px;
+}
+
+#login-body {
+	height: 270px;
+	background: url('../img/login-bg-banner.png') top left no-repeat;
+}
+
+#login-form {
+	padding: 20px 0 0 650px;
+}
+
+#footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #0000;
+	font-family: \5FAE\8F6F\96C5\9ED1;
+	text-align: center;
+}
+
+.searchform {
+	height: 400px;
+	padding-top: 50px;
+}
+
+#searchform {
+	padding-top: 50px;
+}
+
+#logo {
+	height: 80px;
+	background: url('../img/isearch4-logo.png') bottom left no-repeat;
+}
+
+.logotitle {
+	wigth: 700px;
+	padding: 40px 0 00;
+	font-size: 30pt;
+	text-align: right;
+	height: 50px;
+}
+
+#login-content {
+	padding: 50px 10px 0 0;
+	text-align: right;
+}
+
+#mainBody {
+	background-color: #fff;
+	padding-top: 5px;
+}
+/* header style -----------------------------------------------------*/
+.jumbotron {
+	background: linear-gradient(45deg, #020031 0%, #6D3353 100%) repeat
+		scroll 0 0 transparent;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2) inset, 0 -3px 7px
+		rgba(0, 0, 0, 0.2) inset;
+	color: #FFFFFF;
+	padding: 50px 0 15px 0;
+	position: relative;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 0, 0, 0.075);
+}
+
+.jumbotron h1 {
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	padding: 5px 0 2px 270px;
+	margin: 0;
+}
+
+.jumbotron p {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 1.25;
+	padding-left: 270px;
+}
+
+.jumbotron a {
+	color: rgba(255, 255, 255, 0.5);
+	transition: all 0.2s ease-in-out 0s;
+}
+
+.jumbotron a:hover {
+	color: #FFFFFF;
+	text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+}
+
+/* Pattern overlay
+------------------------- */
+.jumbotron .container {
+	position: relative;
+	z-index: 2;
+}
+
+.jumbotron:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url(../img/bs-docs-masthead-pattern.png) repeat center
+		center;
+	opacity: .4;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) , only screen and (
+		min--moz-device-pixel-ratio: 2) , only screen and (
+	-o-min-device-pixel-ratio: 2/1) {
+	.jumbotron:after {
+		background-size: 150px 150px;
+	}
+}
+
+.tdcenter {
+	text-align: center;
+}
+
+#scrollUp {
+	background: url("../img/top.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	bottom: 20px;
+	height: 38px;
+	right: 20px;
+	width: 38px;
+}
+/*栏目样式*/
+.column {
+	line-height: 20px;
+	font-size: 12px;
+}
+
+.column a:hover {
+	color: #04B431;
+}
+
+.pull-right {
+	float: right;
+}
+
+.messagewrap {
+	overflow: hidden;
+	position: relative;
+	height: 120px
+}
+
+.bottomcover {
+	height: 50px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+	background: left bottom no-repeat;
+	/*某从背景色向上渐变透明图片*/
+	_display: none; /*针对IE6体验降级*/
+}
+
+.listBorder {
+	border-color: #E3E3E3 #ECECEC #E0E0E0 #E3E3E3;
+	border-image: none;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.07);
+	padding: 4px;
+}
+
+.rio {
+	margin: 10px 10px 15px 10px;
+}
+
+.read13 {
+	width: 33.3%;
+	/*   float: left; */
+	margin: 0 0 -10px 0;
+	height: 55px;
+	list-style-type: none;
+}
+
+.read23 {
+	width: 33.3%;
+	/*   float: left; */
+	margin: -55px 0 0 200px;
+	height: 55px;
+	list-style-type: none;
+}
+
+.read33 {
+	width: 33.3%;
+	/*   float: left; */
+	margin: -55px 0 -55px 400px;
+	list-style-type: none;
+	height: 55px;
+}
+
+.reactive {
+	color: red !important
+}
+
+.changePage {
+	margin-top: 8px;
+}
+
+.action {
+	background-image: url("../img/actionplus.png");
+	display: inline-block;
+	width: 25px;
+	height: 22px;
+}
+
+.btn-love {
+	background-position: -27px -111px;
+}
+
+.btn-love:hover {
+	background-position: -27px -84px;
+}
+
+.loved:hover {
+	background-position: -135px -84px;
+}
+
+.loved {
+	background-position: -135px -111px;
+}
+
+.btn-del {
+	background-position: -55px -111px;
+}
+
+.btn-del:hover {
+	background-position: -55px -84px;
+}
+
+.topicclass {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.titleEpo {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.contentLeft{
+	float:right;
+}

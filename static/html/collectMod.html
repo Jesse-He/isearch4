@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>iSearch-4--collect</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" href="../css/clEditor/jquery.cleditor.css" />
+<link rel="stylesheet" type="text/css" href="../css/isearch4-resp.css">
+<!-- 时间控件格式 -->
+<link rel="stylesheet" type="text/css"
+	href="../css/jqueryui/jquery-ui-1.8.21.custom.css">
+<link rel="stylesheet" type="text/css"
+	href="../css/jqueryui/datetimepicker.css">
+</head>
+<body class="layout-wrap">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button class="btn btn-navbar" data-target=".nav-collapse"
+					data-toggle="collapse" type="button">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<div class="nav-collapse collapse" id="navbar"></div>
+			</div>
+		</div>
+	</div>
+	<header id="overview" class="jumbotron subhead">
+		<div id="logo" class="container"></div>
+	</header>
+	<div class="container">
+		<div class="row-fluid well">
+			<div class="column text-center span2 well">
+				<h5>
+					<i class="icon-bookmark"></i>舆情收藏管理
+				</h5>
+				<div class="accordion" id="systemPaper">
+					<div class="accordion" id="accordion-1">
+						<table class="table table-hover table-bordered ">
+							<tbody id="viewCollectGroupByMonth">
+								<!-- js生成 -->
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="span10">
+				<h4 class='page-header'>修改收藏信息</h4>
+				<div class="form-horizontal">
+					<div class="control-group">
+						<label class="control-label" for="title">收藏内容</label>
+						<div class="controls">
+							<textarea id="collectContent" name="content" rows="12"></textarea>
+							<span class="help-inline">*填写收藏网页的内容</span>
+						</div>
+					</div>
+					<div class="control-group">
+						<label class="control-label" for="content">情感倾向</label>
+						<div class="controls">
+							<select id="emotionalTendencies" class="input-medium span3"
+								style='width: 220px;'>
+								<option value="0">中性</option>
+								<option value="1">稍微正面</option>
+								<option value="2">稍微负面</option>
+								<option value="3">比较正面</option>
+								<option value="4">比较负面</option>
+							</select><span class="help-inline">*确认内容的情感倾向</span>
+						</div>
+					</div>
+					<div class="controls">
+						<a class="btn closeButton">返回</a>
+						<button id="modCollectButton" class="btn btn-primary">修改</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- begin container -->
+		<!-- end of mainBody -->
+		<div class="row-fluid well">
+			<div id="footer"></div>
+		</div>
+	</div>
+</body>
+<script src="../js/ext/jquery-1.8.3.js"></script>
+<script src="../js/ext/bootstrap.js"></script>
+<script src="../js/ext/bootstrap-tab.js"></script>
+<!--编辑器控件  -->
+<script src="../js/clEditor/jquery.cleditor.min.js"></script>
+<script src="../js/clEditor/jquery.cleditor.js"></script>
+<script type="text/javascript"
+	src="../js/jquery-ui-1.8.21.custom.min.js"></script>
+<script type="text/javascript" src="../js/jquery-ui-timepicker-addon.js"></script>
+<script src="../js/ext/jquery.PrintArea.js"></script>
+<script type="text/javascript" src="../js/md5.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../js/cachepage.js"></script>
+<script type="text/javascript" src="../js/jquery.icheck.js"></script>
+<script src="../js/ajaxfileupload.js"></script>
+<script type="text/javascript" src="../js/utils.js"></script>
+<script type="text/javascript" src="../js/jquery.scrollUp.min.js"></script>
+<script type="text/javascript" src="../js/jquery.unveil.min.js"></script>
+<script type="text/javascript" src="../js/collectMod.js"></script>

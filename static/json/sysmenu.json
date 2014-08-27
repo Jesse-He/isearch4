@@ -1,0 +1,35 @@
+{
+    "ret": true,
+    "errcode": 0,
+    "errmsg": "",
+    "ver": 1,
+    "data": [
+        {
+            "colid": 1,
+            "colname": "在线用户",
+            "link": "onlineuser.html"
+        },
+        {
+            "colid": 2,
+            "colname": "简历管理",
+            "link": "resumelist.html",
+            "subcols": [
+                {
+                    "colid": 3,
+                    "colname": "手工添加简历",
+                    "link": "addresume.html"
+                },
+                {
+                    "colid": 4,
+                    "colname": "批量导入简历",
+                    "link": "batchresume.html"
+                }
+            ]
+        },
+        {
+            "colid": 5,
+            "colname": "日志管理",
+            "link": "operlog.html"
+        }
+    ]
+}

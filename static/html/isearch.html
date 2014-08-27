@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>iSearch-4</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/isearch4-resp.css">
+<link rel="stylesheet" type="text/css" href="../css/jqcloud.css" />
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button class="btn btn-navbar" data-target=".nav-collapse"
+					data-toggle="collapse" type="button">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<div class="nav-collapse collapse" id="navbar"></div>
+			</div>
+		</div>
+	</div>
+	<header id="overview" class="jumbotron subhead">
+		<div id="logo" class="container"></div>
+	</header>
+	<!-- begin container -->
+	<div class="container">
+		<!-- begin Mainbody -->
+		<div id="mainBody" class="row">
+			<!-- begin sidebar -->
+			<div class="span2">
+				<div class="well">
+					<!--欢迎信息，提示  -->
+					<div id="welcomemsg"></div>
+				</div>
+				<div class="well">
+					<h6 class="page-header">
+						<i class=" icon-hand-right"></i> 快捷链接
+					</h6>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="#"
+							onclick="javascript:detailDisplay('epoquery.html?firstColuId=2','sentiment',-1);"
+							id="-1"><i class="icon-volume-up"></i>今日负面舆情</a></li>
+						<li><a href="#"
+							onclick="javascript:detailDisplay('epoquery.html?firstColuId=2','warn',-6);"
+							id="-1"><i class="icon-warning-sign"></i>今日预警舆情</a></li>
+						<li><a href="topic.html" id="-1"><i class="icon-edit"></i>添加监测主题</a></li>
+					</ul>
+				</div>
+				<div class="well">
+					<h6 class="page-header">
+						<i class="icon-signal"></i> 舆情时段分布
+					</h6>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="#"
+							onclick="javascript:detailDisplay('analyse.html?firstColuId=1','recentDays',1);"
+							id="1">今日最新</a></li>
+						<li><a href="#"
+							onclick="javascript:detailDisplay('analyse.html?firstColuId=1','recentDays',2);"
+							id="2">最近两天</a></li>
+						<li><a href="#"
+							onclick="javascript:detailDisplay('analyse.html?firstColuId=1','recentDays',7);"
+							id="7">最近一周</a></li>
+						<li><a href="#"
+							onclick="javascript:detailDisplay('analyse.html?firstColuId=1','recentDays',14);"
+							id="14">最近两周</a></li>
+						<li><a href="#"
+							onclick="javascript:detailDisplay('analyse.html?firstColuId=1','recentDays',30);"
+							id="30">最近一月</a></li>
+						<li><a href="#"
+							onclick="javascript:detailDisplay('analyse.html?firstColuId=1','recentDays',0);"
+							id="0">所有舆情</a></li>
+					</ul>
+				</div>
+
+				<div class="well">
+					<h6 class="page-header">
+						<i class="icon-tags"></i> 其它浏览方式
+					</h6>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="#"
+							onclick="javascript:detailDisplay('epoquery.html?firstColuId=2','attentionLevel',1);"
+							id="1">一般关注</a></li>
+						<li><a href="#"
+							onclick="javascript:detailDisplay('epoquery.html?firstColuId=2','attentionLevel',2);"
+							id="2">比较关注</a></li>
+						<li><a href="#"
+							onclick="javascript:detailDisplay('epoquery.html?firstColuId=2','attentionLevel',3);"
+							id="3">重点关注</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end of sidebar and begin main -->
+			<div class="span7" id="main-side">
+				<!-- 滚动显示 -->
+				<div class="well">
+					<div class="row-fluid">
+						<div class="span10">
+							<h5 id="newWeiBo" class="page-header" data-toogle="popover"
+								data-placement="top" data-content="最新微博信息" data-trigger="hover"
+								data-html="true">
+								<i class="icon-flag"></i>最新微博
+							</h5>
+						</div>
+						<div class="span2">
+							<h6 class="page-header">
+								<a href="#"
+									onclick="javascript:detailDisplay('weibo.html?firstColuId=9','recentDays',1);">更多</a>
+							</h6>
+						</div>
+					</div>
+					<div class="messagewrap">
+						<ul id="oUl" class="nav nav-pills nav-stacked">
+							<li><a href="#" target="_blank">数据</a></li>
+							<!--多个li，请自行复制或者设置重复区域-->
+						</ul>
+						<div class="bottomcover">
+							<!--为了符合w3c要求不能有空标签的要求，此处可选择写一个&nbsp;-->
+						</div>
+					</div>
+				</div>
+				<!-- 最新 -->
+				<div class="well">
+					<div class="row-fluid">
+						<div class="span10">
+							<h5 id="newInfo" class="page-header" data-toogle="popover"
+								data-placement="top" data-content="最新网页信息" data-trigger="hover"
+								data-html="true">
+								<i class="icon-list"></i>最新信息
+							</h5>
+						</div>
+						<div class="span2">
+							<h6 class="page-header">
+								<a href="#"
+									onclick="javascript:detailDisplay('epoquery.html?firstColuId=2','recentDays',1);">更多</a>
+							</h6>
+						</div>
+					</div>
+					<ul id="todayAttention">
+					</ul>
+				</div>
+				<!-- 重点 -->
+				<div class="well">
+					<div class="row-fluid">
+						<div class="span10">
+							<h5 id="importantInfo" class="page-header" data-toogle="popover"
+								data-placement="top" data-content="用户重点关注的舆情信息"
+								data-trigger="hover" data-html="true">
+								<i class="icon-exclamation-sign"></i>重点关注信息
+							</h5>
+						</div>
+						<div class="span2">
+							<h6 class="page-header">
+								<a href="#"
+									onclick="javascript:detailDisplay('epoquery.html?firstColuId=2','attentionLevel',3);">更多</a>
+							</h6>
+						</div>
+					</div>
+					<ul id="focusAttention" class="the-icons clearfix">
+					</ul>
+				</div>
+				<!-- 热点 -->
+				<div class="well">
+					<div class="row-fluid">
+						<div class="span10">
+							<h5 id="hotspotsInfo" class="page-header" data-toogle="popover"
+								data-placement="top" data-content="根据各大网站统计后的热点舆情信息"
+								data-trigger="hover" data-html="true">
+								<i class="icon-fire"></i>热点信息
+							</h5>
+						</div>
+						<div class="span2">
+							<h6 class="page-header">
+								<a href="#"
+									onclick="javascript:detailDisplay('epoquery.html?firstColuId=2','orderField',4);">更多</a>
+							</h6>
+						</div>
+					</div>
+					<ul id="topicHot">
+					</ul>
+				</div>
+				<!-- 预警舆情 -->
+				<div class="well">
+					<div class="row-fluid">
+						<div class="span10">
+							<h5 id="warningInfo" class="page-header" data-toogle="popover"
+								data-placement="top" data-content="用户在敏感词库中设定需要提示预警的舆情信息"
+								data-trigger="hover" data-html="true">
+								<i class="icon-align-right"></i>预警舆情
+							</h5>
+						</div>
+						<div class="span2">
+							<h6 class="page-header">
+								<a href="#"
+									onclick="javascript:detailDisplay('epoquery.html?','warn',-6);">更多</a>
+							</h6>
+						</div>
+					</div>
+					<ul id="warn">
+					</ul>
+				</div>
+			</div>
+			<div class="span3 well" id="side-right">
+				<h5 class="page-header">
+					<i class="icon-align-left"></i>今日舆情时段趋势图
+				</h5>
+				<!-- 分布图 -->
+				<div id="time-distr" style='height: 250px;'></div>
+				<h5 class="page-header">
+					<i class="icon-th"></i>热点词云
+				</h5>
+				<div id="topicCloud" style='height: 250px;'></div>
+				<h5 class="page-header">
+					<i class="icon-bookmark"></i>今日舆情主题分布图
+				</h5>
+				<div id="topic-distr" style='height: 250px;'></div>
+				<h5 class="page-header">
+					<i class="icon-certificate"></i>今日舆情站点分布图
+				</h5>
+				<div id="site-distr" style='height: 250px;'></div>
+			</div>
+		</div>
+		<!-- end of mainBody -->
+		<div class="row well">
+			<div id="footer"></div>
+		</div>
+	</div>
+	<script src="../js/ext/jquery-1.8.3.js"></script>
+	<script src="../js/highcharts/highcharts.js"></script>
+	<script src="../js/ext/bootstrap.js"></script>
+	<script type="text/javascript" src="../js/jquery.scrollUp.min.js"></script>
+	<!-- top1 -->
+	<script type="text/javascript" src="../js/jquery.unveil.min.js"></script>
+	<!-- top2 -->
+	<script type="text/javascript" src="../js/utils.js"></script>
+	<script type="text/javascript" src="../js/md5.js"></script>
+	<script type="text/javascript" src="../js/ext/jqcloud-1.0.4.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/isearch.js"></script>
+</body>

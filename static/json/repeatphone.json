@@ -1,0 +1,12 @@
+{
+    "ret": true,
+    "errcode": 0,
+    "errmsg": "",
+    "ver": 1,
+    "data": [
+        {
+            "resumeId": 1,
+            "resumeNo": "51ABCDEFGHI"
+        }
+    ]
+}

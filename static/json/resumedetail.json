@@ -1,0 +1,35 @@
+{
+    "ret": true,
+    "errcode": 0,
+    "errmsg": "",
+    "ver": 1,
+    "data": {
+        "resume": {
+            "resumeNo": "51ABCDEFGHI",
+            "name": "常晓龙1",
+            "gender": "男",
+            "birthday": "1989-05-22",
+            "highestEdu": "硕士",
+            "mobilePhone": "18611594766",
+            "qq": "854012609",
+            "marriage": "未婚",
+            "idCard": "341221198905220437",
+            "residence": "北京市海淀区",
+            "annualSalary": "5000元/月",
+            "email": "changxiaolong522@126.com",
+            "expectedSalary": "10000元/月",
+            "workExp": "没工作",
+            "eduExp": "为教育",
+            "projectExp": "无项目",
+            "training": "无培训",
+            "skills": "低能儿",
+            "awards": "差等生",
+            "certificates": "光秃秃",
+            "content": "dddddd",
+            "createTime": "2013-1-15 14:30",
+            "creator": "张三",
+            "lastModifiedTime": "2013-1-15 15:30",
+            "modifier": "李四"
+        }
+    }
+}

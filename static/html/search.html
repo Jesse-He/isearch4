@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>iSearch-4--search</title>
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../css/isearch4-resp.css">
+<!-- 时间控件格式 -->
+<link rel="stylesheet" type="text/css"
+	href="../css/jqueryui/jquery-ui-1.8.21.custom.css">
+<link rel="stylesheet" type="text/css"
+	href="../css/jqueryui/datetimepicker.css">
+</head>
+<body class="layout-wrap">
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<button class="btn btn-navbar" data-target=".nav-collapse"
+					data-toggle="collapse" type="button">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<div class="nav-collapse collapse" id="navbar"></div>
+			</div>
+		</div>
+	</div>
+	<header id="overview" class="jumbotron subhead">
+		<div id="logo" class="container"></div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="span12 searchform">
+				<h1 class="text-center">iSearch</h1>
+				<form id="searchform" class="form-search">
+					<div id="searchbox">
+						<table id="searchtable" border="0" align="center">
+							<tbody>
+								<tr>
+									<td valign="middle" colspan="2" align="center"><input
+										id="keywords" class="input-medium search-query span3"
+										type="text" /> <a id="search" type="submit" class="btn">查找</a></td>
+								</tr>
+								<tr>
+									<th>舆情关注度：</th>
+									<td>
+										<table id="emotiontype">
+											<tbody>
+												<tr>
+													<td><input id="emotiontype_0" type="radio"
+														checked="checked" value="" name="emotiontype"> <label
+														for="emotiontype_0">不限</label></td>
+													<td><input id="emotiontype_1" type="radio" value="0"
+														name="emotiontype"> <label for="emotiontype_1">
+															中性</label></td>
+													<td><input id="emotiontype_2" type="radio" value="-1"
+														name="emotiontype"> <label for="emotiontype_2">负面</label>
+													</td>
+													<td><input id="emotiontype_3" type="radio" value="1"
+														name="emotiontype"> <label for="emotiontype_3">正面</label>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<th>搜索引擎类型：</th>
+									<td><select id="mediatype" class="form_combobox span4"
+										name="mediatype">
+											<option value="" selected="selected">全部类型</option>
+									</select></td>
+								</tr>
+								<tr>
+									<th>关键字所在位置：</th>
+									<td><select id="fieldtype" class="form_combobox span4"
+										name="fieldtype">
+											<option value="" selected="selected">任何位置</option>
+											<option value="1">舆情标题</option>
+											<option value="2">舆情摘要</option>
+											<option value="3">舆情内容</option>
+											<option value="4">论坛回帖</option>
+									</select></td>
+								</tr>
+								<tr>
+									<th>设定舆情检索时间段：</th>
+									<td><select id="datefield" class="form_combobox span2"
+										name="datefield" onchange="javascript:timeChange();">
+											<option value="false" selected="selected">采集时间</option>
+											<option value="true">发表时间</option>
+									</select> ：<select id="datetype" class="form_combobox span2"
+										name="datetype">
+											<option onclick="javascript:TimeSearchResult(this);"
+												value="0">任何时间</option>
+											<option onclick="javascript:TimeSearchResult(this);"
+												value="1">一天内</option>
+											<option onclick="javascript:TimeSearchResult(this);"
+												value="2" selected="selected">两天内</option>
+											<option onclick="javascript:TimeSearchResult(this);"
+												value="7">一周内</option>
+											<option onclick="javascript:TimeSearchResult(this);"
+												value="30">一个月内</option>
+											<option onclick="javascript:TimeSearchResult(this);"
+												value="365">一年内</option>
+											<option onclick="javascript:TimeSearchResult(this);"
+												value="10000">自定义</option>
+									</select></td>
+								</tr>
+								<tr id="searchTime">
+									<th>自定义时间段：</th>
+									<td>
+										<form id="searchByTime" class="well">
+											<input id="begintime" class="form_datetime span2" type="text"
+												placeholder="请选择开始时间"> 至 <input id="endtime"
+												class="form_datetime span2" type="text"
+												placeholder="请选择结束时间">
+										</form>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- end of mainBody -->
+		<div class="row well">
+			<div id="footer"></div>
+		</div>
+	</div>
+	<script src="../js/ext/jquery-1.8.3.js"></script>
+	<script src="../js/ext/bootstrap.js"></script>
+	<script src="../js/ext/bootstrap-tab.js"></script>
+	<script type="text/javascript"
+		src="../js/jquery-ui-1.8.21.custom.min.js"></script>
+	<script type="text/javascript"
+		src="../js/jquery-ui-timepicker-addon.js"></script>
+	<script type="text/javascript" src="../js/md5.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/search.js"></script>
+</body>
